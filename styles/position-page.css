@@ -1,1 +1,68 @@
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
 
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 1024px) {
+  /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px; /* 50% */
+  }
+}
+nav {
+  position: fixed;
+  padding: 5px 60px;
+  background-color: gray;
+  width: 100%;
+}
+
+nav ul {
+  position: absolute;
+  list-style-type: none;
+  display: inline-block;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li::after {
+  content: "|";
+  margin-left: 5px;
+}
+nav img {
+  border-radius: 50%;
+  border: 1px solid black;
+  height: 50px;
+}
+
+div.green-box {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  border: 10px dotted green;
+  margin-left: auto;
+  margin-right: auto;
+  top: 200px;
+}
+.green-box img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+.green-box img[src*="cat"] {
+  top: -100px;
+  left: -100px;
+}
+.green-box img[src*="dog"] {
+  bottom: -100px;
+  right: -100px;
+}
